@@ -13,11 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('login', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('id_usuario');
-            $table->timestamps();
-        });
+        Schema::rename('login','logins');
     }
 
     /**
@@ -27,6 +23,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('login');
+        //
     }
 };
